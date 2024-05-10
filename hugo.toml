@@ -1,0 +1,22 @@
+baseURL = 'http://example.org/'
+languageCode = 'zh'
+defaultContentLanguage = 'zh'
+title = 'Jaben Blog'
+theme = 'ananke'
+[menus]
+  [[menus.main]]
+    name = '网页设计笔记'
+    pageRef = '/categories/website-design-notes'
+    weight = 10
+  [[menus.main]]
+    name = '独立开发log'
+    pageRef = '/categories/dev-notes'
+    weight = 20
+  [[menus.main]]
+    name = '我的作品'
+    pageRef = '/'
+    weight = 30
+  [[menus.main]]
+    name = '关于作者'
+    pageRef = '/'
+    weight = 40

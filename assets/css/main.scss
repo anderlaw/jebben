@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    background-color: #DBCFB2;
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+
+
+nav {
+    border-bottom: 1px solid rgba(119, 87, 64, 0.2);
+
+    li a {
+        filter: drop-shadow(4px 4px 7px #774E2A);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+article.image_summary {
+
+    // 标题
+    h1 a {
+        color: #774E2A;
+        font-weight: bold;
+    }
+
+    .summary {
+        color: #906E49;
+
+    }
+
+    .article-footer {
+        color: #906E49;
+        margin-top: 8px;
+
+        .article-info-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .post-tags {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+footer a{
+    color:rgba(90,90,90,0.7) !important;
+}
+.post-article{
+    header{
+        color:#774e2a;
+    }
+    .article-body{
+        color:#906e49;
+    }
+}
