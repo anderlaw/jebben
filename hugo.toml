@@ -1,4 +1,4 @@
-baseURL = 'http://example.org'
+baseURL = 'https://jebben.cn'
 languageCode = 'zh'
 defaultContentLanguage = 'zh'
 title = 'Jaben Blog'
