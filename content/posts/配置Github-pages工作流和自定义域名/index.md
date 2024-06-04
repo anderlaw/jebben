@@ -2,7 +2,7 @@
 title: "配置Github Pages工作流和自定义域名"
 date: 2024-05-11T08:48:35+08:00
 draft: false
-# tags: ["love","make"]
+tags: ["Github pages","workflow"]
 categories: ["dev-notes"]
 summary: "本文介绍为github pages配置自定构建工作流和自定义域名，尤其是自定义域名这个功能非常好用，当然这里面也花了蛮长时间设置的，尤其是DNS记录生效需要等待的时间比较长，印象深刻。"
 ---
