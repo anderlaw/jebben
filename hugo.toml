@@ -22,5 +22,5 @@ theme = 'ananke'
     weight = 30
   [[menus.main]]
     name = '关于作者'
-    pageRef = '/'
+    pageRef = '/about'
     weight = 40
