@@ -3,6 +3,8 @@ languageCode = 'zh'
 defaultContentLanguage = 'zh'
 title = 'Jaben Blog'
 theme = 'ananke'
+[params]
+  favicon = '/image/favicon.png'
 [menus]
   [[menus.main]]
     name = '网页设计笔记'
