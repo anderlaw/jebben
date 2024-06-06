@@ -1,7 +1,7 @@
 baseURL = 'https://jebben.cn'
 languageCode = 'zh'
 defaultContentLanguage = 'zh'
-title = 'Jaben Blog'
+title = 'Jebben 开发日志&网络随笔'
 theme = 'ananke'
 [params]
   favicon = '/image/favicon.png'
