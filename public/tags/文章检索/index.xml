@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>文章检索 on Jaben Blog</title>
+    <link>https://jebben.cn/tags/%E6%96%87%E7%AB%A0%E6%A3%80%E7%B4%A2/</link>
+    <description>Recent content in 文章检索 on Jaben Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 08 Jan 2024 11:45:38 +0800</lastBuildDate><atom:link href="https://jebben.cn/tags/%E6%96%87%E7%AB%A0%E6%A3%80%E7%B4%A2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 静态网站增加搜索功能</title>
+      <link>https://jebben.cn/posts/hugo-static-search/</link>
+      <pubDate>Mon, 08 Jan 2024 11:45:38 +0800</pubDate>
+      
+      <guid>https://jebben.cn/posts/hugo-static-search/</guid>
+      <description>之前没有给博客增加文章检索功能，今天看到别人的博客都有这个功能，并且用来检索之前发布的文章蛮好用的，今天给博客增加上去，遇到了一些坑，今天记录一下。</description>
+    </item>
+    
+  </channel>
+</rss>

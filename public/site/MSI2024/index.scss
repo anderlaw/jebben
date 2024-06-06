@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #5314BA, #5A1111);
+    padding: 30px 40px;
+}
+
+main {
+    margin-top: 20px;
+}
+
+nav .logo {
+    color: #FF3276;
+    background-color: #fff;
+    padding: 10px 18px;
+    border-radius: 6px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: fangsong;
+}
+
+main {
+    .border-box{
+        border: 2px solid #C79209;
+    }
+    .match-data {
+        display: flex;
+        align-items: stretch;
+        /* height: 300px; */
+        justify-content: space-between;
+
+        &>.item {
+            &.replay {
+                /* 704+4 + 空间30px + 内边距左右共 */
+                width: calc(100% - 738px);
+                overflow-y: auto;
+                max-height: 404px;
+                box-sizing: border-box;
+                padding: 0 16px;
+
+                .button-group {
+                    &>* {
+                        cursor: pointer;
+                        color: #BCB4B4;
+
+                        &.active {
+                            color: #fff;
+                        }
+
+                        &:first-child {
+                            margin-right: 16px;
+                        }
+                    }
+                }
+
+                .video-container {
+                    .match-item {
+                        margin: 10px 0;
+
+                        &>.headline {
+                            color: #9ed3f1;
+                            font-weight: bold;
+                            font-size: 20px;
+                            margin-bottom: 8px;
+                        }
+
+                        .match-videos {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr;
+                            grid-gap: 10px;
+                        }
+                    }
+
+                    .video-item {
+                        img {
+                            width: 100%;
+                            cursor: pointer;
+                        }
+
+                        color: #fff;
+                        user-select: none;
+                        text-align: center;
+                    }
+
+                }
+            }
+        }
+    }
+    .match-progress {
+        margin-top: 30px;
+        padding: 0px 16px;
+    }
+    .flow-container {
+        padding: 6px 0;
+        display: flex;
+        
+    }
+}
+
+.headline {
+    display: flex;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    align-items: center;
+    line-height: 2.6;
+    border-bottom: 1px solid #8D79AB;
+    justify-content: space-between;
+}
+.fx{
+    display: inline-flex;
+}
+.alg-ct{
+    align-items: center;
+}
+.card-divider{
+    height: 14px;
+}
+.team-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    padding-right: 8px;
+    height: 30px;
+    img{
+        height: 80%;
+    }
+    &.victory{
+        background-color: #fff;
+        color: #37C770;
+    }
+    &.defeat{
+        background-color: #2f2f2f;
+        color: #CE2222;
+    }
+}
+
+// 箭头
+.arrow.arrow-left{
+    width: 30px;
+    height: 10px;
+    background-color: #ff9800;
+    position: relative;
+    margin-right: 20px;
+    margin-left: 10px;
+    &::before{
+        content: "";
+        position: absolute;
+        border:10px solid transparent ;
+        border-left-color:#ff9800;
+        right: -20px;
+        top: -5px;
+    }
+}
+.arrow.arrow-right{
+    width: 30px;
+    height: 10px;
+    background-color: #ff9800;
+    position: relative;
+    margin-right: 20px;
+    margin-left: 10px;
+    &::before{
+        content: "";
+        position: absolute;
+        border:10px solid transparent ;
+        border-left-color:#ff9800;
+        right: -20px;
+        top: -5px;
+    }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>File on Jaben Blog</title>
+    <link>https://jebben.cn/tags/file/</link>
+    <description>Recent content in File on Jaben Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 08 Jan 2024 09:26:31 +0800</lastBuildDate><atom:link href="https://jebben.cn/tags/file/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>javascript中文件的切片与合并</title>
+      <link>https://jebben.cn/posts/js-slice-concat-file/</link>
+      <pubDate>Mon, 08 Jan 2024 09:26:31 +0800</pubDate>
+      
+      <guid>https://jebben.cn/posts/js-slice-concat-file/</guid>
+      <description>文件切片在前端大文件上传时有很好的应用效果，可以将文件控制在更小的粒度，毕竟操作大文件困难，而操作小粒度的文件更简单高效。文本介绍前端和Nodejs中文件的切片与合并操作。</description>
+    </item>
+    
+  </channel>
+</rss>

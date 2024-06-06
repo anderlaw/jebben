@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JWT on Jaben Blog</title>
+    <link>https://jebben.cn/tags/jwt/</link>
+    <description>Recent content in JWT on Jaben Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 07 Jan 2024 19:16:35 +0800</lastBuildDate><atom:link href="https://jebben.cn/tags/jwt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何在Nodejs中使用JWT</title>
+      <link>https://jebben.cn/posts/jwt_in_nodejs_project/</link>
+      <pubDate>Sun, 07 Jan 2024 19:16:35 +0800</pubDate>
+      
+      <guid>https://jebben.cn/posts/jwt_in_nodejs_project/</guid>
+      <description>JWT 是jsonwebtoken的简称，用于用户认证和权限鉴定。本文介绍一个名叫“jsonwebtoken”的npm包，它实现了JWT的常用的功能。</description>
+    </item>
+    
+  </channel>
+</rss>

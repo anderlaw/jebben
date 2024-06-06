@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Jaben Blog</title>
+    <link>https://jebben.cn/tags/hugo/</link>
+    <description>Recent content in Hugo on Jaben Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 24 Feb 2024 15:57:51 +0800</lastBuildDate><atom:link href="https://jebben.cn/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解决Hugo中文博客字数统计偏少的问题</title>
+      <link>https://jebben.cn/posts/words-count-incorrect/</link>
+      <pubDate>Sat, 24 Feb 2024 15:57:51 +0800</pubDate>
+      
+      <guid>https://jebben.cn/posts/words-count-incorrect/</guid>
+      <description>测试发现，文章里的字数统计和阅读时间统计有误，统计数值偏小。
+测试结果显示，连续的中文字符被当成一个字符，比如我爱你被当成一个字，而我 爱 你会被当成三个字。
+解决方案 在配置文件里增加一行：hasCJKLanguage = true，重新测试统计数据正常了。</description>
+    </item>
+    
+    <item>
+      <title>Hugo 静态网站增加搜索功能</title>
+      <link>https://jebben.cn/posts/hugo-static-search/</link>
+      <pubDate>Mon, 08 Jan 2024 11:45:38 +0800</pubDate>
+      
+      <guid>https://jebben.cn/posts/hugo-static-search/</guid>
+      <description>之前没有给博客增加文章检索功能，今天看到别人的博客都有这个功能，并且用来检索之前发布的文章蛮好用的，今天给博客增加上去，遇到了一些坑，今天记录一下。</description>
+    </item>
+    
+  </channel>
+</rss>

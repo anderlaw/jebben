@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOL MSI 2024 - MSI季中赛 资讯站</title>
+    <meta name="description" content="2024 MSI 季中赛 资讯站">
+    <meta name="keywords" content="LOL MSI 2024">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <nav>
+        <a class="logo" href="/">2024 MSI 季中赛 资讯站</a>
+    </nav>
+    <main>
+        <div class="match-data">
+            <div class="item player border-box">
+                <iframe style="width: 700px;height: 400px;"
+                    src="https://www.bilibili.com/blackboard/live/live-activity-player.html?cid=7734200&quality=0"
+                    frameborder="no" framespacing="0" scrolling="no" allow="autoplay; encrypted-media"
+                    allowfullscreen="true"></iframe>
+            </div>
+            <div class="item replay border-box">
+                <div class="headline">
+                    <span class="title">比赛回放</span>
+                    <span class="button-group">
+                        <span data-name="入围赛" class="btn-item">入围赛</span>
+                        <span data-name="小组赛" class="btn-item">小组赛</span>
+                    </span>
+                </div>
+                <div class="video-container">
+                    <!-- <div class="match-item">
+                        <div class="headline">
+                            5-12 G2 3:0 T1
+                        </div>
+                        <div class="match-videos">
+                            <div class="video-item">
+                                <img src="https://puui.qpic.cn/vpic_cover/v4100xww1v8/v4100xww1v8_hz.jpg/640" />
+                                <span>G2 vs T1 01</span>
+                            </div>
+                            <div class="video-item">
+                                <img src="https://puui.qpic.cn/vpic_cover/v4100xww1v8/v4100xww1v8_hz.jpg/640" />
+                                <span>G2 vs T1 02</span>
+                            </div>
+                            <div class="video-item">
+                                <img src="https://puui.qpic.cn/vpic_cover/v4100xww1v8/v4100xww1v8_hz.jpg/640" />
+                                <span>G2 vs T1 03</span>
+                            </div>
+
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+        </div>
+        <div class="match-progress border-box">
+            <div class="headline" style="border:none;">
+                <span class="title">赛事进展</span>
+            </div>
+            <div class="flow-container">
+                <img width="100%" src="./progress.png">
+            </div>
+        </div>
+    </main>
+    <script>
+        const playerIframe = document.querySelector('.player iframe');
+        // 数据
+        const uninformalMatchVideos = [
+            {
+                date: "5-1",
+                matchResult: [
+                    'FLY',
+                    '2:1',
+                    'PSG',
+                ],
+                matchVideos: [
+                    {
+                        cover: 'https://puui.qpic.cn/vpic_cover/p41009ycr4v/p41009ycr4v_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1203952472&bvid=BV1of421S74X&cid=1526712864&p=1",
+                    },
+                    {
+                        cover: 'https://puui.qpic.cn/vpic_cover/p41009ycr4v/p41009ycr4v_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1203952472&bvid=BV1of421S74X&cid=1526777341&p=2",
+                    },
+                    {
+                        cover: 'https://puui.qpic.cn/vpic_cover/p41009ycr4v/p41009ycr4v_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1203952472&bvid=BV1of421S74X&cid=1526841467&p=3",
+                    },
+
+                ]
+            },
+            {
+                date: "5-1",
+                matchResult: [
+                    'T1',
+                    '2:0',
+                    'EST',
+                ],
+                matchVideos: [
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/f4100nkmabd/f4100nkmabd_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1953957522&bvid=BV1PC411n7fL&cid=1526913064&p=1",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/l4100wqepzs/l4100wqepzs_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1953957522&bvid=BV1PC411n7fL&cid=1526968425&p=2",
+                    }
+                ]
+            },
+            {
+                date: "5-2",
+                matchResult: [
+                    'FNC',
+                    '2:0',
+                    'GAM',
+                ],
+                matchVideos: [
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/t4100za59e8/t4100za59e8_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1803813881&bvid=BV1vb421h75h&cid=1527994587&p=1",
+                    },
+                    {
+                        cover: 'https://puui.qpic.cn/vpic_cover/q4100dyl1a2/q4100dyl1a2_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1803813881&bvid=BV1vb421h75h&cid=1528058494&p=2",
+                    }
+                ]
+            },
+            {
+                date: "5-2",
+                matchResult: [
+                    'TES',
+                    '2:0',
+                    'LLL',
+                ],
+                matchVideos: [
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/u4100bdcw4y/u4100bdcw4y_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1453910499&bvid=BV1ai421C7Qr&cid=1528154861&p=1",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/h4100vtk904/h4100vtk904_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1453910499&bvid=BV1ai421C7Qr&cid=1528196904&p=2",
+                    }
+                ]
+            },
+            {
+                date: "5-3",
+                matchResult: [
+                    'T1',
+                    '2:0',
+                    'FLY',
+                ],
+                matchVideos: [
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/b41003pqjel/b41003pqjel_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1354212216&bvid=BV1nz421S7gL&cid=1529310452&p=1",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/q41008ww6q9/q41008ww6q9_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1354212216&bvid=BV1nz421S7gL&cid=1529363242&p=2",
+                    }
+                ]
+            },
+            {
+                date: "5-3",
+                matchResult: [
+                    'TES',
+                    '2:1',
+                    'FNC',
+                ],
+                matchVideos: [
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/s4100dyv4ec/s4100dyv4ec_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1754069916&bvid=BV1At421F7wW&cid=1529430824&p=1",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/g4100g7ao1s/g4100g7ao1s_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1754069916&bvid=BV1At421F7wW&cid=1529482113&p=2",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/z4100ig9y6r/z4100ig9y6r_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1754069916&bvid=BV1At421F7wW&cid=1529544066&p=3",
+                    }
+                ]
+            },
+            {
+                date: "5-4",
+                matchResult: [
+                    'PSG',
+                    '2:0',
+                    'EST',
+                ],
+                matchVideos: [
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/p4100mqaqtx/p4100mqaqtx_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1804214695&bvid=BV1ob42187vq&cid=1530722005&p=1",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/n4100tlxdze/n4100tlxdze_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1804214695&bvid=BV1ob42187vq&cid=1530774116&p=2",
+                    }
+                ]
+            },
+            {
+                date: "5-4",
+                matchResult: [
+                    'GAM',
+                    '2:1',
+                    'LLL',
+                ],
+                matchVideos: [
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/z4100x0gk9d/z4100x0gk9d_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1004156413&bvid=BV1Sx4y1q7US&cid=1530836523&p=1",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/w4100ecxtch/w4100ecxtch_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1004156413&bvid=BV1Sx4y1q7US&cid=1530905250&p=2",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/k4100b7tze0/k4100b7tze0_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1004156413&bvid=BV1Sx4y1q7US&cid=1530988530&p=3",
+                    }
+                ]
+            },
+            {
+                date: "5-5",
+                matchResult: [
+                    'PSG',
+                    '2:0',
+                    'FLY',
+                ],
+                matchVideos: [
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/m4100q5ut76/m4100q5ut76_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1904155745&bvid=BV1Hm411y7tj&cid=1532123429&p=1",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/b4100c7r1ai/b4100c7r1ai_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1904155745&bvid=BV1Hm411y7tj&cid=1532184263&p=2",
+                    }
+                ]
+            },
+            {
+                date: "5-5",
+                matchResult: [
+                    'FNC',
+                    '2:0',
+                    'GAM',
+                ],
+                matchVideos: [
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/a4100z1cwzf/a4100z1cwzf_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1054152086&bvid=BV1DH4y137Fc&cid=1532238779&p=1",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/h4100uzp4z8/h4100uzp4z8_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1054152086&bvid=BV1DH4y137Fc&cid=1532310485&p=2",
+                    }
+                ]
+            },
+        ];
+        const informalMatchVideos = [
+            {
+                date: "5-7",
+                matchResult: [
+                    'TL',
+                    '0:3',
+                    'TES',
+                ],
+                matchVideos: [
+                    {
+                        cover: 'https://puui.qpic.cn/vpic_cover/a4100h26gcd/a4100h26gcd_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1454081298&bvid=BV1ii421y7NX&cid=1535146959&p=1",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/k4100nu9stf/k4100nu9stf_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1454081298&bvid=BV1ii421y7NX&cid=1535198284&p=2",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/y4100xn9ad2/y4100xn9ad2_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1454081298&bvid=BV1ii421y7NX&cid=1535241041&p=3",
+                    }
+                ]
+            },
+            {
+                date: "5-8",
+                matchResult: [
+                    'GEN',
+                    '3:0',
+                    'FNC',
+                ],
+                matchVideos: [
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/x41000fov62/x41000fov62_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1554463623&bvid=BV111421z7xQ&cid=1536604200&p=1",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/u4100939maq/u4100939maq_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1554463623&bvid=BV111421z7xQ&cid=1536700087&p=2",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/g4100oicmgt/g4100oicmgt_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1554463623&bvid=BV111421z7xQ&cid=1536759767&p=3",
+                    }
+                ]
+            },
+            {
+                date: "5-9",
+                matchResult: [
+                    'BLG',
+                    '3:2',
+                    'PSG',
+                ],
+                matchVideos: [
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/k4100scfhtp/k4100scfhtp_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1904441295&bvid=BV1VS411c71Y&cid=1538176987&p=1",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/c4100nur28l/c4100nur28l_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1904441295&bvid=BV1VS411c71Y&cid=1538244071&p=2",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/x4100bb1qw5/x4100bb1qw5_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1904441295&bvid=BV1VS411c71Y&cid=1538304309&p=3",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/d4100hqwdcy/d4100hqwdcy_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1904441295&bvid=BV1VS411c71Y&cid=1538380900&p=4",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/n410050c4r0/n410050c4r0_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1904441295&bvid=BV1VS411c71Y&cid=1538446951&p=5"
+                    }
+                ]
+            },
+            {
+                date: "5-10",
+                matchResult: [
+                    'T1',
+                    '3:2',
+                    'G2',
+                ],
+                matchVideos: [
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/s4100yzdw0y/s4100yzdw0y_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1254334628&bvid=BV15J4m1T7PW&cid=1539735920&p=1",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/k41009ad1l4/k41009ad1l4_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1254334628&bvid=BV15J4m1T7PW&cid=1539781294&p=2",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/g41002c1shg/g41002c1shg_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1254334628&bvid=BV15J4m1T7PW&cid=1539846992&p=3",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/e4100twtzzd/e4100twtzzd_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1254334628&bvid=BV15J4m1T7PW&cid=1539901071&p=4",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/n41003sg283/n41003sg283_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1254334628&bvid=BV15J4m1T7PW&cid=1539978982&p=5"
+                    }
+                ]
+            },
+            {
+                date: "5-11",
+                matchResult: [
+                    'TL',
+                    '3:1',
+                    'FNC',
+                ],
+                matchVideos: [
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/y4100dsau3k/y4100dsau3k_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1154499428&bvid=BV1bZ421x7vJ&cid=1540644830&p=1",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/p4100yujiye/p4100yujiye_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1154499428&bvid=BV1bZ421x7vJ&cid=1540676277&p=2",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/q4100gnr6ho/q4100gnr6ho_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1154499428&bvid=BV1bZ421x7vJ&cid=1540735070&p=3",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/m4100pcz4ip/m4100pcz4ip_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1154499428&bvid=BV1bZ421x7vJ&cid=1540795819&p=4",
+                    }
+                ]
+            },
+            {
+                date: "5-11",
+                matchResult: [
+                    'GEN',
+                    '3:2',
+                    'TES',
+                ],
+                matchVideos: [
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/w4100i0b8hx/w4100i0b8hx_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1104280709&bvid=BV1Fw4m197M5&cid=1540861077&p=1",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/d41002ww1p3/d41002ww1p3_hz.jpg/640',
+                        playerUrl:"//player.bilibili.com/player.html?aid=1104280709&bvid=BV1Fw4m197M5&cid=1540925532&p=2"
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/u4100o8opt8/u4100o8opt8_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1104280709&bvid=BV1Fw4m197M5&cid=1540997267&p=3"
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/p410030x48n/p410030x48n_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1104280709&bvid=BV1Fw4m197M5&cid=1541077723&p=4"
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/w41009nsynn/w41009nsynn_hz.jpg/640',
+                        playerUrl: "//player.bilibili.com/player.html?aid=1104280709&bvid=BV1Fw4m197M5&cid=1541119090&p=5"
+                    },
+                ]
+            },
+            {
+                date: "5-12",
+                matchResult: [
+                    'G2',
+                    '3:0',
+                    'PSG',
+                ],
+                matchVideos: [
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/v4100xww1v8/v4100xww1v8_hz.jpg/640',
+                        playerUrl: "bvid=BV1xM4m1C7aJ&cid=1540861077&p=1",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/f4100y0xdui/f4100y0xdui_hz.jpg/640',
+                        playerUrl:"bvid=BV1xM4m1C7aJ&cid=1540861077&p=2",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/f4100olmhsz/f4100olmhsz_hz.jpg/640',
+                        playerUrl: "bvid=BV1xM4m1C7aJ&cid=1540861077&p=3",
+                    }
+                ]
+            },
+            {
+                date: "5-12",
+                matchResult: [
+                    'BLG',
+                    '3:1',
+                    'T1',
+                ],
+                matchVideos: [
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/u4100t1mp5e/u4100t1mp5e_hz.jpg/640',
+                        playerUrl: "bvid=BV1V1421z7fY&cid=1540861077&p=1",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/e4100eb2t6v/e4100eb2t6v_hz.jpg/640',
+                        playerUrl:"bvid=BV1V1421z7fY&cid=1540861077&p=2",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/n41008udtyt/n41008udtyt_hz.jpg/640',
+                        playerUrl: "bvid=BV1V1421z7fY&cid=1540861077&p=3",
+                    },
+                    {
+                        cover: '//puui.qpic.cn/vpic_cover/x4100s21egk/x4100s21egk_hz.jpg/640',
+                        playerUrl: "bvid=BV1V1421z7fY&cid=1540861077&p=4",
+                    }
+                ]
+            }
+        ];
+        // 默认小组赛了
+        const swithMatch = (currentMatchCategory) => {
+            const videoContainer = document.querySelector('.video-container');
+            const btns = document.querySelectorAll('.button-group .btn-item');
+            for (let i = 0; i < btns.length; i++) {
+                btns[i].classList.remove('active');
+            }
+
+            let currentMatchVideos = informalMatchVideos;
+            if (currentMatchCategory === '小组赛') {
+                btns[1].classList.add('active');
+            } else {
+                btns[0].classList.add('active');
+                currentMatchVideos = uninformalMatchVideos;
+            }
+            videoContainer.innerHTML = currentMatchVideos.map(item => `
+            <div class="match-item">
+                        <div class="headline">
+                            ${item.date} ${item.matchResult.join(" ")}
+                        </div>
+                        <div class="match-videos">
+                            ${item.matchVideos.map((videoItem, index) => `
+                                <div class="video-item">
+                                    <img class="cover" data-player-url="${videoItem.playerUrl}" src="${videoItem.cover}" />
+                                    <span>${item.matchResult[0]} vs ${item.matchResult[2]} ${index + 1}</span>
+                                </div>
+                                `
+            ).join("")}
+                        </div>
+                    </div>`
+            ).join("");
+
+
+        }
+        swithMatch('小组赛');
+
+        // 加载小组赛数据
+
+
+
+        document.querySelector('.button-group').onclick = (e) => {
+            const isBtn = e.target.classList.contains('btn-item');
+            if (isBtn) {
+                const categoryName = e.target.dataset.name.trim();
+                swithMatch(categoryName);
+            }
+        }
+        document.querySelector('.video-container').onclick = (e) => {
+            const shouldVideoBePlay = e.target.classList.contains('cover');
+            if (shouldVideoBePlay) {
+                console.log('play video');
+                const videoId = e.target.dataset.playerUrl.match(/bvid=([^&]+)/)[1];
+                const pageNo = e.target.dataset.playerUrl.match(/p=(\d+)/)[1]||1;
+                window.open(`https://www.bilibili.com/video/${videoId}?p=${pageNo}`,'_blank');
+            }
+        }
+    </script>
+</body>
+
+</html>

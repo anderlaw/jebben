@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github pages on Jaben Blog</title>
+    <link>https://jebben.cn/tags/github-pages/</link>
+    <description>Recent content in Github pages on Jaben Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 11 May 2024 08:48:35 +0800</lastBuildDate><atom:link href="https://jebben.cn/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>配置Github Pages工作流和自定义域名</title>
+      <link>https://jebben.cn/posts/%E9%85%8D%E7%BD%AEgithub-pages%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%92%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D/</link>
+      <pubDate>Sat, 11 May 2024 08:48:35 +0800</pubDate>
+      
+      <guid>https://jebben.cn/posts/%E9%85%8D%E7%BD%AEgithub-pages%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%92%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D/</guid>
+      <description>本文介绍为github pages配置自定构建工作流和自定义域名，尤其是自定义域名这个功能非常好用，当然这里面也花了蛮长时间设置的，尤其是DNS记录生效需要等待的时间比较长，印象深刻。</description>
+    </item>
+    
+  </channel>
+</rss>
