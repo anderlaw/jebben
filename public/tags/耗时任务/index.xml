@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>耗时任务 on Jebben 开发日志&amp;网络随笔</title>
+    <link>https://jebben.cn/tags/%E8%80%97%E6%97%B6%E4%BB%BB%E5%8A%A1/</link>
+    <description>Recent content in 耗时任务 on Jebben 开发日志&amp;网络随笔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Thu, 06 Jun 2024 08:27:49 +0800</lastBuildDate><atom:link href="https://jebben.cn/tags/%E8%80%97%E6%97%B6%E4%BB%BB%E5%8A%A1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>前后端如何实现流式传输数据</title>
+      <link>https://jebben.cn/posts/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%BC%8F%E4%BC%A0%E8%BE%93%E6%95%B0%E6%8D%AE/</link>
+      <pubDate>Thu, 06 Jun 2024 08:27:49 +0800</pubDate>
+      
+      <guid>https://jebben.cn/posts/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%B5%81%E5%BC%8F%E4%BC%A0%E8%BE%93%E6%95%B0%E6%8D%AE/</guid>
+      <description>做了一个分析视频链接并下载提供观看的网站，由于后端服务执行时间相对久一些，全部完成后前端才有反馈，体验很不好，于是改成了一边执行任务一边回传数据给前端提示任务进度的方式。</description>
+    </item>
+    
+  </channel>
+</rss>

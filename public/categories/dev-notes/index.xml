@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>dev-notes on Jaben Blog</title>
+    <title>dev-notes on Jebben 开发日志&amp;网络随笔</title>
     <link>https://jebben.cn/categories/dev-notes/</link>
-    <description>Recent content in dev-notes on Jaben Blog</description>
+    <description>Recent content in dev-notes on Jebben 开发日志&amp;网络随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Wed, 05 Jun 2024 07:34:06 +0800</lastBuildDate><atom:link href="https://jebben.cn/categories/dev-notes/index.xml" rel="self" type="application/rss+xml" />

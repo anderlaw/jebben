@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on Jaben Blog</title>
+    <title>Hugo on Jebben 开发日志&amp;网络随笔</title>
     <link>https://jebben.cn/tags/hugo/</link>
-    <description>Recent content in Hugo on Jaben Blog</description>
+    <description>Recent content in Hugo on Jebben 开发日志&amp;网络随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Sat, 24 Feb 2024 15:57:51 +0800</lastBuildDate><atom:link href="https://jebben.cn/tags/hugo/index.xml" rel="self" type="application/rss+xml" />

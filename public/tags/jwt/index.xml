@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>JWT on Jaben Blog</title>
+    <title>JWT on Jebben 开发日志&amp;网络随笔</title>
     <link>https://jebben.cn/tags/jwt/</link>
-    <description>Recent content in JWT on Jaben Blog</description>
+    <description>Recent content in JWT on Jebben 开发日志&amp;网络随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <lastBuildDate>Sun, 07 Jan 2024 19:16:35 +0800</lastBuildDate><atom:link href="https://jebben.cn/tags/jwt/index.xml" rel="self" type="application/rss+xml" />
