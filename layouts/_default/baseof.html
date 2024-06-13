@@ -14,6 +14,19 @@
   {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
   {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
   {{ $public := not .Params.private }}
+
+  {{ if $production }}
+  <meta name="test" content="producton">
+  {{ else }}
+  <meta name="test" content="not production">
+  {{ end }}
+
+  {{ if $public }}
+  <meta name="test" content="public">
+  {{ else }}
+  <meta name="test" content="not public">
+  {{ end }}
+
   {{ if and $production $public }}
   <meta name="robots" content="index, follow">
   {{ else }}
