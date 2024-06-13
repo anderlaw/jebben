@@ -15,15 +15,6 @@
   {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
   {{ $public := not .Params.private }}
 
-  {{ $production1 := eq (getenv "HUGO_ENV") "production" }}
-  {{ if $production1 }}
-  <meta name="test" content="producton">
-  {{ else }}
-  <meta name="test" content="not production">
-  {{ end }}
-
-
-
   {{ if and $production $public }}
   <meta name="robots" content="index, follow">
   {{ else }}
