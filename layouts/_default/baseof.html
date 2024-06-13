@@ -51,7 +51,7 @@
   {{ end }}
   <!-- jabin blog 样式 -->
   {{ $style := resources.Match "css/**.scss" | resources.Concat "custom.css" | toCSS | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
+  <link rel="stylesheet" href="{{ $style.Permalink }}" crossorigin="anonymous" integrity="{{ $style.Data.Integrity }}" media="screen">
   <!-- 自定义字体 -->
   <style>
     @font-face {
