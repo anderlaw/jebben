@@ -1,6 +1,5 @@
 ---
 title: "通过配置“内容安全策略”禁用eval"
-weight: 4
 date: 2023-12-24T10:56:15+08:00
 draft: false
 featuredImage: banner.png
