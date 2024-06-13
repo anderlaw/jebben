@@ -1,6 +1,4 @@
-yaml
-Copy code
-name: Build and Deploy Hugo
+name: Build and Deploy Hugo Site
 
 on:
   push:
