@@ -1,5 +1,5 @@
 ---
-title: "迁移github—pages到cloudflare Pages"
+title: "从Github Pages转到Cloudflare Pages"
 date: 2024-06-13T11:51:02+08:00
 tags: ["Hugo","github pages","cloudflare pages"]
 summary: "查看个人网站时，发现robots meta元标签禁止了搜索引擎蜘蛛的爬取，经过调查发现多个build工作流重叠导致了原有的环境变量没有生效，进而允许搜索引擎抓取的逻辑没有如愿执行."
