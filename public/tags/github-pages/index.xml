@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Github pages on Jebben 开发日志&amp;网络随笔</title>
+    <title>github pages on Jebben 开发日志&amp;网络随笔</title>
     <link>https://jebben.cn/tags/github-pages/</link>
-    <description>Recent content in Github pages on Jebben 开发日志&amp;网络随笔</description>
+    <description>Recent content in github pages on Jebben 开发日志&amp;网络随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 11 May 2024 08:48:35 +0800</lastBuildDate><atom:link href="https://jebben.cn/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Jun 2024 11:51:02 +0800</lastBuildDate><atom:link href="https://jebben.cn/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从Github Pages转到Cloudflare Pages</title>
+      <link>https://jebben.cn/posts/%E8%BF%81%E7%A7%BBgithubpages%E5%88%B0cloudflare-pages/</link>
+      <pubDate>Thu, 13 Jun 2024 11:51:02 +0800</pubDate>
+      
+      <guid>https://jebben.cn/posts/%E8%BF%81%E7%A7%BBgithubpages%E5%88%B0cloudflare-pages/</guid>
+      <description>查看个人网站时，发现robots meta元标签禁止了搜索引擎蜘蛛的爬取，经过调查发现多个build工作流重叠导致了原有的环境变量没有生效，进而允许搜索引擎抓取的逻辑没有如愿执行.</description>
+    </item>
+    
     <item>
       <title>配置Github Pages工作流和自定义域名</title>
       <link>https://jebben.cn/posts/%E9%85%8D%E7%BD%AEgithub-pages%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%92%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D/</link>

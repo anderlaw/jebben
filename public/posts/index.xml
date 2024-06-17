@@ -6,14 +6,14 @@
     <description>Recent content in Posts on Jebben 开发日志&amp;网络随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 06 Jun 2024 08:27:49 +0800</lastBuildDate><atom:link href="https://jebben.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Jun 2024 11:51:02 +0800</lastBuildDate><atom:link href="https://jebben.cn/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>通过配置“内容安全策略”禁用eval</title>
-      <link>https://jebben.cn/posts/disable-eval/</link>
-      <pubDate>Sun, 24 Dec 2023 10:56:15 +0800</pubDate>
+      <title>从Github Pages转到Cloudflare Pages</title>
+      <link>https://jebben.cn/posts/%E8%BF%81%E7%A7%BBgithubpages%E5%88%B0cloudflare-pages/</link>
+      <pubDate>Thu, 13 Jun 2024 11:51:02 +0800</pubDate>
       
-      <guid>https://jebben.cn/posts/disable-eval/</guid>
-      <description>eval()是JavaScript中的一个强大函数，它可以从文字字符串运行javascript代码，但出于一些不安全的原因，我们不建议使用eval(),本文介绍如何在项目中禁用该函数。</description>
+      <guid>https://jebben.cn/posts/%E8%BF%81%E7%A7%BBgithubpages%E5%88%B0cloudflare-pages/</guid>
+      <description>查看个人网站时，发现robots meta元标签禁止了搜索引擎蜘蛛的爬取，经过调查发现多个build工作流重叠导致了原有的环境变量没有生效，进而允许搜索引擎抓取的逻辑没有如愿执行.</description>
     </item>
     
     <item>
@@ -133,6 +133,15 @@
       
       <guid>https://jebben.cn/posts/jwt_in_nodejs_project/</guid>
       <description>JWT 是jsonwebtoken的简称，用于用户认证和权限鉴定。本文介绍一个名叫“jsonwebtoken”的npm包，它实现了JWT的常用的功能。</description>
+    </item>
+    
+    <item>
+      <title>通过配置“内容安全策略”禁用eval</title>
+      <link>https://jebben.cn/posts/disable-eval/</link>
+      <pubDate>Sun, 24 Dec 2023 10:56:15 +0800</pubDate>
+      
+      <guid>https://jebben.cn/posts/disable-eval/</guid>
+      <description>eval()是JavaScript中的一个强大函数，它可以从文字字符串运行javascript代码，但出于一些不安全的原因，我们不建议使用eval(),本文介绍如何在项目中禁用该函数。</description>
     </item>
     
     <item>
