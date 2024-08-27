@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Jebben 开发日志&amp;网络随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 13 Jun 2024 11:51:02 +0800</lastBuildDate><atom:link href="https://jebben.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Aug 2024 12:03:19 +0800</lastBuildDate><atom:link href="https://jebben.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何用ts定义固定类型数组</title>
+      <link>https://jebben.cn/posts/%E5%A6%82%E4%BD%95%E7%94%A8ts%E5%AE%9A%E4%B9%89%E5%9B%BA%E5%AE%9A%E7%B1%BB%E5%9E%8B%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Tue, 27 Aug 2024 12:03:19 +0800</pubDate>
+      
+      <guid>https://jebben.cn/posts/%E5%A6%82%E4%BD%95%E7%94%A8ts%E5%AE%9A%E4%B9%89%E5%9B%BA%E5%AE%9A%E7%B1%BB%E5%9E%8B%E6%95%B0%E7%BB%84/</guid>
+      <description>在 TypeScript 中，你可以使用元组类型（Tuple Type）来定义一个数组，其中每个元素的类型都是固定的。 比如，你可以定义一个有两个元素的数组，第一个元素类型是布尔值，第二个是数字：
+let arr: [boolean, string] = [false, 1]; 其中：[boolean, string] 是一个元组类型，表示该数组的第一个元素必须是 boolean 类型，第二个元素必须是 number 类型。</description>
+    </item>
+    
     <item>
       <title>从Github Pages转到Cloudflare Pages</title>
       <link>https://jebben.cn/posts/%E8%BF%81%E7%A7%BBgithubpages%E5%88%B0cloudflare-pages/</link>

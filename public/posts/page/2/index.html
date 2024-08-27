@@ -142,6 +142,26 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/words-count-incorrect/" class="link black dim">
+        解决Hugo中文博客字数统计偏少的问题
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      测试发现，文章里的字数统计和阅读时间统计有误，统计数值偏小。
+测试结果显示，连续的中文字符被当成一个字符，比如我爱你被当成一个字，而我 爱 你会被当成三个字。
+解决方案 在配置文件里增加一行：hasCJKLanguage = true，重新测试统计数据正常了。
+    </div>
+    <a href="/posts/words-count-incorrect/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1"></a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/use-css-var/" class="link black dim">
         如何使用Css变量
       </a>
