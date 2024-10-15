@@ -1,7 +1,7 @@
 ---
 title: "如何修复CORS错误\"No 'Access-Control-Allow-Origin' header is present on the requested resource\"？"
 date: 2023-11-16T09:00:40+08:00
-featuredImage: banner.png
+cover: banner.png
 draft: false
 summary: CORS,即跨域资源共享,是前端工程师经常面临的一中情况，文中将介绍CORS的感念和工作原理。我们将了解什么是预检请求以及 CORS 如何依赖它们。此外，我们将介绍如何使用 CORS 并解决应用程序中由此产生的问题。
 ---

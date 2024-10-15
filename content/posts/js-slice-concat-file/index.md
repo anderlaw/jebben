@@ -2,7 +2,7 @@
 title: "javascript中文件的切片与合并"
 date: 2024-01-08T09:26:31+08:00
 draft: false
-featuredImage: banner.jpeg
+cover: banner.jpeg
 tags: ["File","分片上传","断点续传"]
 summary: 文件切片在前端大文件上传时有很好的应用效果，可以将文件控制在更小的粒度，毕竟操作大文件困难，而操作小粒度的文件更简单高效。文本介绍前端和Nodejs中文件的切片与合并操作。
 ---

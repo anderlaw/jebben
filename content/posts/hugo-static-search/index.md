@@ -2,7 +2,7 @@
 title: "Hugo 静态网站增加搜索功能"
 date: 2024-01-08T11:45:38+08:00
 draft: false
-featuredImage: banner.png
+cover: banner.png
 tags: ["Hugo","文章检索"]
 summary: 之前没有给博客增加文章检索功能，今天看到别人的博客都有这个功能，并且用来检索之前发布的文章蛮好用的，今天给博客增加上去，遇到了一些坑，今天记录一下。
 ---

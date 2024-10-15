@@ -2,7 +2,7 @@
 title: "通过配置“内容安全策略”禁用eval"
 date: 2023-12-24T10:56:15+08:00
 draft: false
-featuredImage: banner.png
+cover: banner.png
 summary: eval()是JavaScript中的一个强大函数，它可以从文字字符串运行javascript代码，但出于一些不安全的原因，我们不建议使用eval(),本文介绍如何在项目中禁用该函数。
 ---
 > 众所周知，eval()是JavaScript中的一个强大函数，它可以从文字字符串运行javascript代码，但出于一些不安全的原因，我们不建议使用eval()。 

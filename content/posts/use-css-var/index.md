@@ -2,7 +2,7 @@
 title: "如何使用Css变量"
 date: 2024-01-10T09:21:51+08:00
 draft: false
-featuredImage: banner.jpeg
+cover: banner.jpeg
 summary: 借助css变量，可以让我们更佳轻松地配置、修改页面的样式。早期组织css需借助预编译语言如less、sass等，而如今css变量则赋予了css原生的能力，本文介绍如何使用css变量.
 ---
 

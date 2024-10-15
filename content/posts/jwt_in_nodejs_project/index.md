@@ -2,7 +2,7 @@
 title: "如何在Nodejs中使用JWT"
 date: 2024-01-07T19:16:35+08:00
 draft: false
-featuredImage: banner.png
+cover: banner.png
 summary: JWT 是jsonwebtoken的简称，用于用户认证和权限鉴定。本文介绍一个名叫“jsonwebtoken”的npm包，它实现了JWT的常用的功能。
 tags: ["JWT"]
 ---
