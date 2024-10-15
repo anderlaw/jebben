@@ -8,7 +8,10 @@ summary: "本文介绍一下浏览器里如何通过js操作文件以及特点"
 
 为了保护用户隐私和安全。浏览器中能够操作的文件通常是用户显式选择或授权的，JavaScript无法像后端那样直接读写用户的文件系统。
 
-## 获取文件：通过`<input type="file">`或拖拽API
+## 获取文件
+有两种方式：
+- 通过`<input type="file">`
+- 拖拽API
 
 通过HTML的`<input type="file">`元素，用户可以手动选择本地文件，JavaScript代码随后可以访问这些文件的引用。
 特点：
@@ -38,8 +41,7 @@ summary: "本文介绍一下浏览器里如何通过js操作文件以及特点"
 <div id="dropZone" style="width: 200px; height: 200px; border: 2px dashed #ccc;">
     拖拽文件到此处
 </div>
-```
-```javascript
+<script>
 const dropZone = document.getElementById('dropZone');
 dropZone.addEventListener('dragover', (event) => {
     event.preventDefault();  // 阻止默认行为
@@ -50,8 +52,9 @@ dropZone.addEventListener('drop', (event) => {
     const files = event.dataTransfer.files;  // 获取拖入的文件
     console.log(files[0].name);  // 打印文件名
 });
+</script>
 ```
-## 读取文件内容：`FileReader`
+## 读取文件内容
 描述：FileReader是一个内置的API，用于异步读取`File`或`Blob`对象的内容。
 常用方法：
 - `readAsText()`：将文件读取为文本字符串。
@@ -92,9 +95,9 @@ a.download = 'example.txt';
 a.click();  // 自动触发下载
 URL.revokeObjectURL(url);  // 释放 URL
 ```
-## 创建临时文件URL：`URL.createObjectURL()`
+## 创建临时文件URL
 
-描述：URL.createObjectURL()可以为File或Blob对象生成一个临时的URL，该URL可以用于预览或直接访问文件数据（如在网页中显示图片、视频等）。
+描述：`URL.createObjectURL()`可以为File或Blob对象生成一个临时的URL，该URL可以用于预览或直接访问文件数据（如在网页中显示图片、视频等）。
 
 特点：
 - 适合用于在**不完全加载**文件内容的情况下快速预览文件。
