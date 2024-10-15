@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>浏览器中js操作文件的那些事 | Jebben 开发日志&amp;网络随笔</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="description"
+    content="本文介绍一下浏览器里如何通过js操作文件以及特点">
+  <meta name="generator" content="Hugo 0.115.1">
+  
+  
+  
+
+  
+  <meta name="robots" content="noindex, nofollow">
+  
+  
+
+  
+
+
+  
+
+  
+  
+<link rel="shortcut icon" href="/image/favicon.png" type="image/x-icon" />
+
+
+  
+
+  
+
+  
+  <link rel="canonical" href="https://jebben.cn/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%ADjs%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/">
+  
+  
+  
+  <link rel="stylesheet" href="/custom.min.7f1191ba9dd6fb40bfbffa8dbb4e7daf4419ef992b4de5cd51531ec2dc79b1d0.css" integrity="sha256-fxGRup3W&#43;0C/v/qNu059r0QZ75krTeXNUVMewtx5sdA=" media="screen">
+  
+  <style>
+    @font-face {
+      font-family: "GoodHood";
+      src: url("/font/GoodHood.otf");
+    }
+  </style>
+  <meta property="og:title" content="浏览器中js操作文件的那些事" />
+<meta property="og:description" content="本文介绍一下浏览器里如何通过js操作文件以及特点" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jebben.cn/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%ADjs%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-10-15T12:09:41+08:00" />
+<meta property="article:modified_time" content="2024-10-15T12:09:41+08:00" />
+<meta itemprop="name" content="浏览器中js操作文件的那些事">
+<meta itemprop="description" content="本文介绍一下浏览器里如何通过js操作文件以及特点"><meta itemprop="datePublished" content="2024-10-15T12:09:41+08:00" />
+<meta itemprop="dateModified" content="2024-10-15T12:09:41+08:00" />
+<meta itemprop="wordCount" content="210">
+<meta itemprop="keywords" content="File," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="浏览器中js操作文件的那些事"/>
+<meta name="twitter:description" content="本文介绍一下浏览器里如何通过js操作文件以及特点"/>
+
+  
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FEY3L54XY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7FEY3L54XY');
+  </script>
+</head>
+
+<body class="ma0 ">
+  <div class="container">
+    
+   
+  
+
+<header class="cover bg-top" style="background-image: url('');">
+  <div class="">
+    <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    
+    <a href="/" style="font-family:GoodHood;letter-spacing:2px;"
+      class="f2 fw2 hover-white no-underline white-90 dib">
+      
+      Jebben&#39;s Blog
+      
+    </a>
+    
+    <div class="flex-l items-center">
+      
+
+      
+      <ul class="pl0 mr3">
+        
+        <li class="list f5 f5-ns fw4 dib pr3">
+          <a class="hover-white no-underline white-90" href="" title="">
+            网页设计笔记
+          </a>
+        </li>
+        
+        <li class="list f5 f5-ns fw4 dib pr3">
+          <a class="hover-white no-underline white-90" href="/categories/dev-notes/" title="">
+            独立开发log
+          </a>
+        </li>
+        
+        <li class="list f5 f5-ns fw4 dib pr3">
+          <a class="hover-white no-underline white-90" href="/" title="">
+            我的作品
+          </a>
+        </li>
+        
+        <li class="list f5 f5-ns fw4 dib pr3">
+          <a class="hover-white no-underline white-90" href="/about/" title="">
+            关于作者
+          </a>
+        </li>
+        
+      </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+  </div>
+</header>
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="post-article flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f2 athelas mt3 mb1">浏览器中js操作文件的那些事</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-10-15T12:09:41+08:00">十月 15, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="article-body nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l"><p>为了保护用户隐私和安全。浏览器中能够操作的文件通常是用户显式选择或授权的，JavaScript无法像后端那样直接读写用户的文件系统。</p>
+<h2 id="获取文件通过input-typefile或拖拽api">获取文件：通过<code>&lt;input type=&quot;file&quot;&gt;</code>或拖拽API</h2>
+<p>通过HTML的<code>&lt;input type=&quot;file&quot;&gt;</code>元素，用户可以手动选择本地文件，JavaScript代码随后可以访问这些文件的引用。
+特点：</p>
+<ul>
+<li>只能通过用户交互选择文件，无法自动访问文件。</li>
+<li>可以获取文件的基本元数据（名称、大小、类型、修改时间等），但内容不会自动加载(内容未或未完全存在内存中，仍需用户主动通过API读取)，需手动读取。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;file&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fileInput&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fileInput</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;fileInput&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fileInput</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;change&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">file</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fileInput</span>.<span style="color:#a6e22e">files</span>[<span style="color:#ae81ff">0</span>];
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">name</span>); <span style="color:#75715e">// 文件名
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">size</span>); <span style="color:#75715e">// 文件大小（字节）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">file</span>.<span style="color:#a6e22e">type</span>); <span style="color:#75715e">// MIME 类型
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    });
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div><p>除此之外，还可以通过拖放API来获取文件，用户可以通过拖放操作上传文件，文件会作为拖放事件的<code>DataTransfer</code>对象的一部分传递给JavaScript。</p>
+<p>特点：</p>
+<ul>
+<li>与<code>&lt;input type=&quot;file&quot;&gt;</code>类似，仍需用户交互。</li>
+<li>适合构建更友好的用户体验，如通过拖拽上传文件。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;dropZone&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width: 200px; height: 200px; border: 2px dashed #ccc;&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    拖拽文件到此处
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">div</span>&gt;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">dropZone</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;dropZone&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">dropZone</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;dragover&#39;</span>, (<span style="color:#a6e22e">event</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">preventDefault</span>();  <span style="color:#75715e">// 阻止默认行为
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">dropZone</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;drop&#39;</span>, (<span style="color:#a6e22e">event</span>) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">preventDefault</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">files</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">dataTransfer</span>.<span style="color:#a6e22e">files</span>;  <span style="color:#75715e">// 获取拖入的文件
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">files</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">name</span>);  <span style="color:#75715e">// 打印文件名
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>});
+</span></span></code></pre></div><h2 id="读取文件内容filereader">读取文件内容：<code>FileReader</code></h2>
+<p>描述：FileReader是一个内置的API，用于异步读取<code>File</code>或<code>Blob</code>对象的内容。
+常用方法：</p>
+<ul>
+<li><code>readAsText()</code>：将文件读取为文本字符串。</li>
+<li><code>readAsDataURL()</code>：将文件读取为Base64编码的Data URL（通常用于显示图片）。</li>
+<li><code>readAsArrayBuffer()</code>：将文件读取为ArrayBuffer，适用于二进制数据（如音频、视频）。</li>
+<li><code>readAsBinaryString()</code>：已废弃，尽量不再使用。</li>
+</ul>
+<p>特点：</p>
+<ul>
+<li>异步操作，不会阻塞主线程。</li>
+<li>只能读取文件内容，不能修改或写入文件。</li>
+<li>只能读取用户通过<code>&lt;input&gt;</code>选择或通过拖放授权的文件。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fileInput</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;fileInput&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fileInput</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;change&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">file</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fileInput</span>.<span style="color:#a6e22e">files</span>[<span style="color:#ae81ff">0</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">reader</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">FileReader</span>();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">reader</span>.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">event</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;文件内容：&#39;</span>, <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">result</span>);  <span style="color:#75715e">// 文件的文本内容
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">reader</span>.<span style="color:#a6e22e">readAsText</span>(<span style="color:#a6e22e">file</span>);  <span style="color:#75715e">// 将文件读取为文本
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>});
+</span></span></code></pre></div><h2 id="blob-对象">Blob 对象</h2>
+<p>描述：Blob（Binary Large Object）是一个表示二进制数据的对象，可以用来创建和处理文件数据。</p>
+<p>特点：</p>
+<ul>
+<li>可以使用JavaScript生成文件数据，并模拟文件对象。</li>
+<li>常用于生成动态数据文件，如创建<code>CSV</code>、<code>PDF</code>等，并提供下载功能。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">blob</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Blob</span>([<span style="color:#e6db74">&#39;Hello, World!&#39;</span>], { <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;text/plain&#39;</span> });
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">createObjectURL</span>(<span style="color:#a6e22e">blob</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;a&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">href</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">url</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">download</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;example.txt&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">click</span>();  <span style="color:#75715e">// 自动触发下载
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">revokeObjectURL</span>(<span style="color:#a6e22e">url</span>);  <span style="color:#75715e">// 释放 URL
+</span></span></span></code></pre></div><h2 id="创建临时文件urlurlcreateobjecturl">创建临时文件URL：<code>URL.createObjectURL()</code></h2>
+<p>描述：URL.createObjectURL()可以为File或Blob对象生成一个临时的URL，该URL可以用于预览或直接访问文件数据（如在网页中显示图片、视频等）。</p>
+<p>特点：</p>
+<ul>
+<li>适合用于在<strong>不完全加载</strong>文件内容的情况下快速预览文件。</li>
+<li>创建的URL只在当前会话有效，使用完后应调用<code>URL.revokeObjectURL()</code>释放资源。</li>
+<li>不会将文件持久化，只有浏览器中临时存储。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fileInput</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;fileInput&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fileInput</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;change&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">file</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fileInput</span>.<span style="color:#a6e22e">files</span>[<span style="color:#ae81ff">0</span>];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">objectURL</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">createObjectURL</span>(<span style="color:#a6e22e">file</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">img</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;img&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">img</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">objectURL</span>;
+</span></span><span style="display:flex;"><span>    document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">img</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 释放 URL
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">URL</span>.<span style="color:#a6e22e">revokeObjectURL</span>(<span style="color:#a6e22e">objectURL</span>);  <span style="color:#75715e">// 释放内存
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }, <span style="color:#ae81ff">10000</span>);  <span style="color:#75715e">// 10秒后释放
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>});
+</span></span></code></pre></div><p>总结：</p>
+<ul>
+<li>读取文件：通过<code>&lt;input type=&quot;file&quot;</code>&gt;或拖拽API获取文件引用，这里的引用不同于服务端的<strong>文件句柄</strong>概念，程序不可以通过它对文件进行读写操作，而需要借助额外的API如<code>FileReader</code>来异步地读取文件内容。</li>
+<li>预览文件：通过URL.createObjectURL()生成临时URL快速预览文件（这里也无需将文件完全加载到内存中）。</li>
+<li>安全性：浏览器中的文件操作非常安全，用户必须手动选择文件，前端无法未经授权直接访问用户文件系统。</li>
+</ul>
+<span class="post-tags">
+    <img src="/image/tags-fill.png" height="22px"/>
+    <span><a class="color-inherit link" href="/tags/file/">File</a></span>
+  </span><div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3"></p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/js-slice-concat-file/">javascript中文件的切片与合并</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class=" bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f5 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jebben.cn/" >
+    &copy;  Jebben 开发日志&网络随笔 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </div>
+</body>
+
+</html>

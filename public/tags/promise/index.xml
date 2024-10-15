@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>promise on Jebben 开发日志&amp;网络随笔</title>
+    <link>https://jebben.cn/tags/promise/</link>
+    <description>Recent content in promise on Jebben 开发日志&amp;网络随笔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 30 Sep 2024 21:15:22 +0800</lastBuildDate><atom:link href="https://jebben.cn/tags/promise/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Promise.all的注意事项</title>
+      <link>https://jebben.cn/posts/promise.all%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link>
+      <pubDate>Mon, 30 Sep 2024 21:15:22 +0800</pubDate>
+      
+      <guid>https://jebben.cn/posts/promise.all%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid>
+      <description>今天测试提了一个bug，排查了很久发现是Promise.all用法的一个问题，颠覆了我对它的认知，这里记录一下。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,43 @@
     <description>Recent content in Posts on Jebben 开发日志&amp;网络随笔</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 27 Aug 2024 12:03:19 +0800</lastBuildDate><atom:link href="https://jebben.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 15 Oct 2024 12:09:41 +0800</lastBuildDate><atom:link href="https://jebben.cn/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>浏览器中js操作文件的那些事</title>
+      <link>https://jebben.cn/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%ADjs%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</link>
+      <pubDate>Tue, 15 Oct 2024 12:09:41 +0800</pubDate>
+      
+      <guid>https://jebben.cn/posts/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%ADjs%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B/</guid>
+      <description>本文介绍一下浏览器里如何通过js操作文件以及特点</description>
+    </item>
+    
+    <item>
+      <title>Js中如何使用function.bind</title>
+      <link>https://jebben.cn/posts/js%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8function.bind/</link>
+      <pubDate>Wed, 09 Oct 2024 15:14:00 +0800</pubDate>
+      
+      <guid>https://jebben.cn/posts/js%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8function.bind/</guid>
+      <description>js中bind的方法一直在用，今天看Vue的源码发现里面还有一些其他的东西，记录一下巩固，不然每次都查MDN很不方便，希望这次能记到脑筋里</description>
+    </item>
+    
+    <item>
+      <title>Promise.all的注意事项</title>
+      <link>https://jebben.cn/posts/promise.all%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link>
+      <pubDate>Mon, 30 Sep 2024 21:15:22 +0800</pubDate>
+      
+      <guid>https://jebben.cn/posts/promise.all%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid>
+      <description>今天测试提了一个bug，排查了很久发现是Promise.all用法的一个问题，颠覆了我对它的认知，这里记录一下。</description>
+    </item>
+    
+    <item>
+      <title>Typescript中元祖与数组的区别和使用示例</title>
+      <link>https://jebben.cn/posts/ts%E5%85%83%E7%A5%96%E4%B8%8E%E6%95%B0%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/</link>
+      <pubDate>Fri, 20 Sep 2024 10:17:49 +0800</pubDate>
+      
+      <guid>https://jebben.cn/posts/ts%E5%85%83%E7%A5%96%E4%B8%8E%E6%95%B0%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/</guid>
+      <description>ts项目中需要一种有限数量的集合，成员的类型又不都相同，这里使用数组显然不太适合，搜了一下可以用元祖tuple。</description>
+    </item>
+    
     <item>
       <title>如何用ts定义固定类型数组</title>
       <link>https://jebben.cn/posts/%E5%A6%82%E4%BD%95%E7%94%A8ts%E5%AE%9A%E4%B9%89%E5%9B%BA%E5%AE%9A%E7%B1%BB%E5%9E%8B%E6%95%B0%E7%BB%84/</link>
@@ -78,24 +114,6 @@ let arr: [boolean, string] = [false, 1]; 其中：[boolean, string] 是一个元
       
       <guid>https://jebben.cn/posts/%E9%85%8D%E7%BD%AEgithub-pages%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%92%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D/</guid>
       <description>本文介绍为github pages配置自定构建工作流和自定义域名，尤其是自定义域名这个功能非常好用，当然这里面也花了蛮长时间设置的，尤其是DNS记录生效需要等待的时间比较长，印象深刻。</description>
-    </item>
-    
-    <item>
-      <title>开发笔记：色彩的选择与搭配</title>
-      <link>https://jebben.cn/posts/my-fir-post/</link>
-      <pubDate>Fri, 10 May 2024 10:56:07 +0800</pubDate>
-      
-      <guid>https://jebben.cn/posts/my-fir-post/</guid>
-      <description>网页中色彩的使用非常重要，如何选择就变得非常关键，我们首先需要考虑网页的设计内涵和业务场景.</description>
-    </item>
-    
-    <item>
-      <title>网页设计笔记第一弹：色彩的选择与搭配</title>
-      <link>https://jebben.cn/posts/my-first-post/</link>
-      <pubDate>Fri, 10 May 2024 10:56:07 +0800</pubDate>
-      
-      <guid>https://jebben.cn/posts/my-first-post/</guid>
-      <description>网页中色彩的使用非常重要，如何选择就变得非常关键，我们首先需要考虑网页的设计内涵和业务场景.</description>
     </item>
     
     <item>

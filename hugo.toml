@@ -1,12 +1,30 @@
 baseURL = 'https://jebben.cn'
-languageCode = 'zh'
+languageCode = 'zh-Hans'
 defaultContentLanguage = 'zh'
-
 title = 'Jebben 开发日志&网络随笔'
-theme = 'ananke'
+theme = "dream"
 [params]
+  lightTheme = "emerald"
+  darkTheme = "forest"
+  zenMode = true
   favicon = '/image/favicon.png'
   sitename = "Jebben's Blog"
+
+  author = "Jebben"
+  avatar = "image/favicon.png"
+  headerTitle = "Jebben博客&网络随笔"
+  description = "Jebben的个人博客&网络随笔"
+  motto = "千里之行，始于足下。"
+
+  #footerBottomText = ''
+  siteStartYear = 2016
+  rss = true
+
+  customSyntaxHighlighting = false
+  stickyNav = true
+  showTableOfContents = true
+  showSummaryCoverInPost = true
+  showPrevNextPost = true
 [menus]
   [[menus.main]]
     name = '网页设计笔记'
@@ -24,3 +42,51 @@ theme = 'ananke'
     name = '关于作者'
     pageRef = '/about'
     weight = 40
+
+# [services]
+# [services.disqus]
+# shortname = ""
+# [services.googleAnalytics]
+# ID = ""
+
+# backgroundImage = "me/background.jpg"
+# backgroundImageDark = ""
+
+
+# valine = true
+# LEANCLOUD_APP_ID = ""
+# LEANCLOUD_APP_KEY = ""
+
+# waline = true
+# walineServer = ""
+
+# email = ""
+
+
+
+# favicon = "favicon.ico"
+
+# Syntax highlighting
+# customSyntaxHighlighting = true
+
+# options
+# stickyNav = true
+# reorderNavItems = ["search", "rss", "posts", "categories", "tags"]
+# collapseNavItems = ["posts", "categories", "tags"]
+# noDefaultSummaryCover = true
+# showTableOfContents = true
+# showSummaryCoverInPost = true
+# showPrevNextPost = true
+# reorderShares = ["x", "facebook", "whatsapp"]
+
+# [params.navItems]
+
+# [params.advanced]
+# customCSS = ["css/custom.css"]
+# customJS = []
+
+# [params.experimental]
+# jsDate = true
+# jsDateFormat = "yyyy年MM月dd日"
+enableRobotsTXT = true
+hasCJKLanguage = true

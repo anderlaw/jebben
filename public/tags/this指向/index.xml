@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>this指向 on Jebben 开发日志&amp;网络随笔</title>
+    <link>https://jebben.cn/tags/this%E6%8C%87%E5%90%91/</link>
+    <description>Recent content in this指向 on Jebben 开发日志&amp;网络随笔</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 09 Oct 2024 15:14:00 +0800</lastBuildDate><atom:link href="https://jebben.cn/tags/this%E6%8C%87%E5%90%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Js中如何使用function.bind</title>
+      <link>https://jebben.cn/posts/js%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8function.bind/</link>
+      <pubDate>Wed, 09 Oct 2024 15:14:00 +0800</pubDate>
+      
+      <guid>https://jebben.cn/posts/js%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8function.bind/</guid>
+      <description>js中bind的方法一直在用，今天看Vue的源码发现里面还有一些其他的东西，记录一下巩固，不然每次都查MDN很不方便，希望这次能记到脑筋里</description>
+    </item>
+    
+  </channel>
+</rss>

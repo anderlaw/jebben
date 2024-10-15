@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>数组</title>
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="description"
+    content="">
+  <meta name="generator" content="Hugo 0.115.1">
+  
+  
+  
+
+  
+  <meta name="robots" content="noindex, nofollow">
+  
+  
+
+  
+
+
+  
+
+  
+  
+<link rel="shortcut icon" href="/image/favicon.png" type="image/x-icon" />
+
+
+  
+
+  
+  
+  <link href="/tags/%E6%95%B0%E7%BB%84/index.xml" rel="alternate" type="application/rss+xml" title="Jebben 开发日志&amp;网络随笔" />
+  <link href="/tags/%E6%95%B0%E7%BB%84/index.xml" rel="feed" type="application/rss+xml" title="Jebben 开发日志&amp;网络随笔" />
+  
+  
+
+  
+  <link rel="canonical" href="https://jebben.cn/tags/%E6%95%B0%E7%BB%84/">
+  
+  
+  
+  <link rel="stylesheet" href="/custom.min.7f1191ba9dd6fb40bfbffa8dbb4e7daf4419ef992b4de5cd51531ec2dc79b1d0.css" integrity="sha256-fxGRup3W&#43;0C/v/qNu059r0QZ75krTeXNUVMewtx5sdA=" media="screen">
+  
+  <style>
+    @font-face {
+      font-family: "GoodHood";
+      src: url("/font/GoodHood.otf");
+    }
+  </style>
+  <meta property="og:title" content="数组" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jebben.cn/tags/%E6%95%B0%E7%BB%84/" />
+<meta itemprop="name" content="数组">
+<meta itemprop="description" content=""><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="数组"/>
+<meta name="twitter:description" content=""/>
+
+  
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FEY3L54XY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7FEY3L54XY');
+  </script>
+</head>
+
+<body class="ma0 ">
+  <div class="container">
+    
+
+<header class="cover bg-top" style="background-image: url('');">
+  <div class="">
+    <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    
+    <a href="/" style="font-family:GoodHood;letter-spacing:2px;"
+      class="f2 fw2 hover-white no-underline white-90 dib">
+      
+      Jebben&#39;s Blog
+      
+    </a>
+    
+    <div class="flex-l items-center">
+      
+
+      
+      <ul class="pl0 mr3">
+        
+        <li class="list f5 f5-ns fw4 dib pr3">
+          <a class="hover-white no-underline white-90" href="" title="">
+            网页设计笔记
+          </a>
+        </li>
+        
+        <li class="list f5 f5-ns fw4 dib pr3">
+          <a class="hover-white no-underline white-90" href="/categories/dev-notes/" title="">
+            独立开发log
+          </a>
+        </li>
+        
+        <li class="list f5 f5-ns fw4 dib pr3">
+          <a class="hover-white no-underline white-90" href="/" title="">
+            我的作品
+          </a>
+        </li>
+        
+        <li class="list f5 f5-ns fw4 dib pr3">
+          <a class="hover-white no-underline white-90" href="/about/" title="">
+            关于作者
+          </a>
+        </li>
+        
+      </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+  </div>
+</header>
+    <main class="pb7" role="main">
+      
+
+
+<div class="flex flex-col md:flex-row mt-4">
+
+  <div class="md:basis-[200px] lg:basis-[300px] p-4 prose dark:prose-invert">
+    <h1 class="text-2xl">数组</h1>
+    <p class="text-sm">1篇文章</p>
+    <div class="flex flex-wrap gap-4 mt-6">
+      
+
+      
+      
+      <a href="/tags/cloudflare-pages/" class="badge h-6 no-underline hover:badge-primary">
+        cloudflare pages
+      </a>
+      
+      
+      
+      <a href="/tags/file/" class="badge h-6 no-underline hover:badge-primary">
+        File
+      </a>
+      
+      
+      
+      <a href="/tags/function%E5%8E%9F%E5%9E%8B%E6%96%B9%E6%B3%95/" class="badge h-6 no-underline hover:badge-primary">
+        Function原型方法
+      </a>
+      
+      
+      
+      <a href="/tags/github-pages/" class="badge h-6 no-underline hover:badge-primary">
+        github pages
+      </a>
+      
+      
+      
+      <a href="/tags/http%E6%B5%81%E5%BC%8F%E4%BC%A0%E8%BE%93/" class="badge h-6 no-underline hover:badge-primary">
+        http流式传输
+      </a>
+      
+      
+      
+      <a href="/tags/hugo/" class="badge h-6 no-underline hover:badge-primary">
+        Hugo
+      </a>
+      
+      
+      
+      <a href="/tags/jwt/" class="badge h-6 no-underline hover:badge-primary">
+        JWT
+      </a>
+      
+      
+      
+      <a href="/tags/promise/" class="badge h-6 no-underline hover:badge-primary">
+        promise
+      </a>
+      
+      
+      
+      <a href="/tags/promise%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95/" class="badge h-6 no-underline hover:badge-primary">
+        Promise静态方法
+      </a>
+      
+      
+      
+      <a href="/tags/this%E6%8C%87%E5%90%91/" class="badge h-6 no-underline hover:badge-primary">
+        this指向
+      </a>
+      
+      
+      
+      <a href="/tags/ts/" class="badge h-6 no-underline hover:badge-primary">
+        ts
+      </a>
+      
+      
+      
+      <a href="/tags/workflow/" class="badge h-6 no-underline hover:badge-primary">
+        workflow
+      </a>
+      
+      
+      
+      <a href="/tags/%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8/" class="badge h-6 no-underline hover:badge-primary">
+        端口占用
+      </a>
+      
+      
+      
+      <a href="/tags/%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0/" class="badge h-6 no-underline hover:badge-primary">
+        断点续传
+      </a>
+      
+      
+      
+      <a href="/tags/%E5%88%86%E7%89%87%E4%B8%8A%E4%BC%A0/" class="badge h-6 no-underline hover:badge-primary">
+        分片上传
+      </a>
+      
+      
+      
+      <a href="/tags/%E8%80%97%E6%97%B6%E4%BB%BB%E5%8A%A1/" class="badge h-6 no-underline hover:badge-primary">
+        耗时任务
+      </a>
+      
+      
+      
+      <a href="/tags/%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B/" class="badge h-6 no-underline hover:badge-primary">
+        杀死进程
+      </a>
+      
+      
+      
+      <span class="badge h-6 badge-primary">
+        数组
+      </span>
+      
+      
+      
+      <a href="/tags/%E6%96%87%E7%AB%A0%E6%A3%80%E7%B4%A2/" class="badge h-6 no-underline hover:badge-primary">
+        文章检索
+      </a>
+      
+      
+      
+      <a href="/tags/%E5%85%83%E7%BB%84/" class="badge h-6 no-underline hover:badge-primary">
+        元组
+      </a>
+      
+      
+    </div>
+  </div>
+  
+  <div class="divider divider-vertical md:divider-horizontal px-4 md:px-0"></div>
+  
+  <div class="flex-1">
+    
+
+    
+    <div class="dream-grid">
+    
+      <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+        <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/posts/ts%E5%85%83%E7%A5%96%E4%B8%8E%E6%95%B0%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/" class="link black dim">
+        Typescript中元祖与数组的区别和使用示例
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      ts项目中需要一种有限数量的集合，成员的类型又不都相同，这里使用数组显然不太适合，搜了一下可以用元祖tuple。
+    </div>
+    <a href="/posts/ts%E5%85%83%E7%A5%96%E4%B8%8E%E6%95%B0%E7%BB%84%E7%9A%84%E5%8C%BA%E5%88%AB%E5%92%8C%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1"></a>
+  </div>
+</div>
+
+      </div>
+    
+    </div>
+    
+
+    
+  </div>
+</div>
+
+
+    </main>
+    <footer class=" bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f5 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jebben.cn/" >
+    &copy;  Jebben 开发日志&网络随笔 2024 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </div>
+</body>
+
+</html>

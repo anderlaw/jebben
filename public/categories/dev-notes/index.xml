@@ -52,14 +52,5 @@
       <description>本文介绍为github pages配置自定构建工作流和自定义域名，尤其是自定义域名这个功能非常好用，当然这里面也花了蛮长时间设置的，尤其是DNS记录生效需要等待的时间比较长，印象深刻。</description>
     </item>
     
-    <item>
-      <title>开发笔记：色彩的选择与搭配</title>
-      <link>https://jebben.cn/posts/my-fir-post/</link>
-      <pubDate>Fri, 10 May 2024 10:56:07 +0800</pubDate>
-      
-      <guid>https://jebben.cn/posts/my-fir-post/</guid>
-      <description>网页中色彩的使用非常重要，如何选择就变得非常关键，我们首先需要考虑网页的设计内涵和业务场景.</description>
-    </item>
-    
   </channel>
 </rss>
