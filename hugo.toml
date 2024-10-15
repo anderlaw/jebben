@@ -22,6 +22,8 @@ theme = "dream"
 
   customSyntaxHighlighting = false
   stickyNav = true
+  reorderNavItems = ["rss", "posts", "categories", "tags","search"]
+
   showTableOfContents = true
   showSummaryCoverInPost = true
   showPrevNextPost = true
