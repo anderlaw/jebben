@@ -2,6 +2,7 @@
 title: "Js中如何使用function.bind"
 date: 2024-10-09T15:14:00+08:00
 draft: false
+tags: ["Function原型方法","this指向"]
 summary: "js中bind的方法一直在用，今天看Vue的源码发现里面还有一些其他的东西，记录一下巩固，不然每次都查MDN很不方便，希望这次能记到脑筋里"
 ---
 

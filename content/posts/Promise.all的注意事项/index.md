@@ -2,6 +2,7 @@
 title: "Promise.all的注意事项"
 date: 2024-09-30T21:15:22+08:00
 draft: false
+tags: ["promise","Promise静态方法"]
 summary: "今天测试提了一个bug，排查了很久发现是Promise.all用法的一个问题，颠覆了我对它的认知，这里记录一下。"
 ---
 ### Promise.all()的定义
