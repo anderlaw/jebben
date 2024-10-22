@@ -6,7 +6,7 @@ theme = "dream"
 [params]
   lightTheme = "emerald"
   darkTheme = "forest"
-  zenMode = true
+  zenMode = false
   favicon = '/image/favicon.png'
   sitename = "Jebben's Blog"
 
