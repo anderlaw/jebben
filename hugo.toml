@@ -46,11 +46,12 @@ theme = "dream"
     pageRef = '/about'
     weight = 40
 
-# [services]
+[services]
+  [services.googleAnalytics]
+    ID = '7FEY3L54XY'
 # [services.disqus]
 # shortname = ""
-# [services.googleAnalytics]
-# ID = ""
+  
 
 # backgroundImage = "me/background.jpg"
 # backgroundImageDark = ""
