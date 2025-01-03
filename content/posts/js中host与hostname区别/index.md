@@ -6,13 +6,8 @@ author: Author Name
 # avatar: /img/author.jpg
 # authorlink: https://author.site
 cover: image.png
-# images:
-#   - /img/cover.jpg
-categories:
-  - category1
 tags:
-  - tag1
-  - tag2
+  - 域名
 # nolastmod: true
 summary: 在开发一个项目的过程中，需要判断页面的域名时，发现 DOM 的 location 对象中有两个相关属性：host 和 hostname。经过对比后发现，这两者存在一些差异。特此记录，方便日后参考。
 draft: false
