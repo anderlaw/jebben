@@ -14,7 +14,7 @@ tags:
   - CSS固定背景
 # nolastmod: true
 draft: false
-summary: 我希望为页面添加背景图，并使其在页面滚动时保持固定，而不是随着内容一同滚动。基于这个需求，我自然地使用了 background-attachment: fixed;，但结果却未达到预期效果。经过排查和深入分析，我总结了几点关键的注意事项。
+summary: 我希望为页面添加背景图，并使其在页面滚动时保持固定，而不是随着内容一同滚动。基于这个需求，我自然地使用了background-attachment:fixed，但结果却未达到预期效果。经过排查和深入分析，我总结了几点关键的注意事项。
 ---
 
 
