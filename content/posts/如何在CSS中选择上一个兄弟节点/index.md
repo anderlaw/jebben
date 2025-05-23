@@ -8,9 +8,9 @@ lastmod: 2024-10-22T09:59:44+08:00
 #   - /img/cover.jpg
 cover: images.jpeg
 categories:
-  - category1
-tags:
   - CSS
+tags:
+  - CSS选择器
 # nolastmod: true
 draft: false
 summary: CSS中没有提供选择上一节点（即前一个兄弟元素）的选择器，那么如何实现该需求呢？
