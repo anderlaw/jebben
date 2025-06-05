@@ -35,19 +35,18 @@ summary: 在全球化的应用场景中，前端开发中处理时间相关逻�
 
 前端可以通过以下方式获取当前浏览器所在的时区：
 
-```
+```javascript
 Intl.DateTimeFormat().resolvedOptions().timeZone
 // 示例输出: "Asia/Shanghai"
 ```
 
 或者获取与 UTC 的时间偏移（单位：分钟）：
 
-```
+```javascript
 new Date().getTimezoneOffset()
 // 示例输出: -480（UTC+8）
 ```
 
----
 
 ## 二、ISO 时间字符串（ISO 8601）
 
@@ -55,8 +54,8 @@ new Date().getTimezoneOffset()
 
 ISO 8601 是前后端常用的时间格式标准，其结构如下：
 
-```
-YYYY-MM-DDTHH:mm:ss.sssZ
+```javascript
+// YYYY-MM-DDTHH:mm:ss.sssZ
 ```
 
 * **T** 是日期和时间的分隔符；
@@ -79,7 +78,7 @@ YYYY-MM-DDTHH:mm:ss.sssZ
 * 存储为 **时间戳**（Number）或 **ISO 字符串（UTC）**；
 * **前端展示时使用 **Intl.DateTimeFormat** 渲染成需要的日期时间格式。**，支持指定时区、本地语言。
 
-```
+```javascript
 new Intl.DateTimeFormat('zh-CN', {
   year: 'numeric',
   month: '2-digit',
@@ -112,7 +111,7 @@ new Intl.DateTimeFormat('zh-CN', {
 
 使用 **dayjs** + 插件可以高效处理时区转换：
 
-```
+```javascript
 import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
@@ -123,7 +122,7 @@ dayjs.extend(timezone);
 
 转换时区示例，将UTC-10 转换为 北京时间（UTC+8）：
 
-```
+```javascript
 dayjs.tz('2020-12-12 12:00:00', 'Etc/GMT+10')
      .tz('Asia/Shanghai')
      .format();
