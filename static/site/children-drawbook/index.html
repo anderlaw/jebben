@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<style> 
+body{
+    margin: 0;
+}
+.swiper {
+  width: 100vw;
+  height: 100vh;
+background-color: #E0F7FA;
+}
+/* 封面样式 */
+.swiper-slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+
+    padding: 20px 10px;
+}
+.swiper-slide .cover{
+    font-size: 56px;
+    color: #FFA726;
+    text-align: center;
+}
+.swiper-slide img{
+    width: 100%;
+}
+.swiper-slide p{
+    font-size: 20px;
+    font-weight: bold;
+    /* color: #455A64; */
+    color: #6D4C41;
+}
+</style>
+</head>
+<body>
+<!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- 这里插入幻灯片 -->
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+  <!-- If we need navigation buttons -->
+  <!-- <div class="swiper-button-prev"></div> -->
+  <!-- <div class="swiper-button-next"></div> -->
+  <!-- If we need scrollbar -->
+  <!-- <div class="swiper-scrollbar"></div> -->
+</div>
+<script id="myData" type="application/json">
+[
+  {
+    "keyword": "Animals",
+    "results": [
+    {
+      "tags": ["Elephant", "Black-and-white"],
+      "img_src": "https://cdn.pixabay.com/photo/2017/10/20/10/58/elephant-2870777_1280.jpg",
+      "description": "大象走呀走，鼻子翘高高，咕噜咕噜喝水咯！"
+    },
+    {
+      "tags": ["Deer", "Elk", "Nature", "Animal"],
+      "img_src": "https://cdn.pixabay.com/photo/2019/12/13/18/06/deer-4693574_640.jpg",
+      "description": "小鹿轻轻跳，森林里玩捉迷藏！"
+    },
+    {
+      "tags": ["Lion", "Cub", "Cat", "Wild"],
+      "img_src": "https://cdn.pixabay.com/photo/2014/12/12/19/45/lion-565820_640.jpg",
+      "description": "小狮子真威风，张开嘴巴唱大歌！"
+    },
+    {
+      "tags": ["Dog", "Poodle", "Grass", "Pet"],
+      "img_src": "https://cdn.pixabay.com/photo/2024/05/26/16/49/dog-8789154_640.jpg",
+      "description": "狗狗汪汪叫，要和你做朋友！"
+    },
+    {
+      "tags": ["Animal", "Leopard", "Wildlife"],
+      "img_src": "https://cdn.pixabay.com/photo/2012/03/01/00/28/animal-19621_640.jpg",
+      "description": "花斑豹子快如风，奔跑跳跃真轻松！"
+    },
+    {
+      "tags": ["Dog", "Animal", "Pet", "Poodle"],
+      "img_src": "https://cdn.pixabay.com/photo/2022/07/12/17/12/dog-7317820_640.jpg",
+      "description": "小狗咬尾巴，开心转圈圈！"
+    },
+    {
+      "tags": ["Lynx", "Wildcat", "Nature"],
+      "img_src": "https://cdn.pixabay.com/photo/2023/12/11/12/51/lynx-8443540_640.jpg",
+      "description": "猫猫耳朵尖，森林里是大侦探！"
+    },
+    {
+      "tags": ["Animal", "Mammal", "Nature"],
+      "img_src": "https://cdn.pixabay.com/photo/2022/09/13/13/47/animal-7451969_640.jpg",
+      "description": "动物朋友多，一起来玩游戏喽！"
+    },
+    {
+      "tags": ["Cat", "Pet", "Domestic Animal"],
+      "img_src": "https://cdn.pixabay.com/photo/2018/03/26/02/05/cat-3261420_640.jpg",
+      "description": "喵喵喵，猫咪跳上沙发啦！"
+    },
+    {
+      "tags": ["Bunny", "Cute", "Grass"],
+      "img_src": "https://cdn.pixabay.com/photo/2016/11/21/12/55/bunny-1845263_640.jpg",
+      "description": "小兔子爱吃菜，跳呀跳，好可爱！"
+    },
+    {
+      "tags": ["Guinea Pig", "Rodent"],
+      "img_src": "https://cdn.pixabay.com/photo/2020/06/11/18/18/guinea-pig-5287749_640.jpg",
+      "description": "毛绒绒的小豚鼠，啾啾叫不停！"
+    },
+    {
+      "tags": ["Dog", "Jack Russel Terrier"],
+      "img_src": "https://cdn.pixabay.com/photo/2022/08/28/18/03/dog-7417233_640.jpg",
+      "description": "狗狗奔跑快，像风一样自由！"
+    },
+    {
+      "tags": ["Cat", "Pet", "Cat Eyes"],
+      "img_src": "https://cdn.pixabay.com/photo/2020/02/20/12/12/cat-4864605_640.jpg",
+      "description": "猫咪眼睛亮，好像两颗星星在眨眼！"
+    },
+    {
+      "tags": ["Duck", "Bird", "Grass", "Nature"],
+      "img_src": "https://cdn.pixabay.com/photo/2021/04/22/06/40/duck-6198196_640.jpg",
+      "description": "鸭子嘎嘎叫，摇摇摆摆走路妙！"
+    },
+    {
+      "tags": ["Snail", "Shell"],
+      "img_src": "https://cdn.pixabay.com/photo/2021/05/28/12/43/snail-6290772_640.jpg",
+      "description": "小蜗牛背着壳，一点一点慢慢爬！"
+    },
+    {
+      "tags": ["Raccoon", "Animal", "Nature"],
+      "img_src": "https://cdn.pixabay.com/photo/2019/08/01/12/19/raccoon-4377383_640.jpg",
+      "description": "浣熊小手真灵巧，偷偷摸摸像小贼！"
+    },
+    {
+      "tags": ["Llama", "Alpaca", "Animal"],
+      "img_src": "https://cdn.pixabay.com/photo/2021/11/09/18/51/llama-6782140_640.jpg",
+      "description": "羊驼吐泡泡，好像在说话！"
+    },
+    {
+      "tags": ["The Sheep", "Court", "Cattle"],
+      "img_src": "https://cdn.pixabay.com/photo/2022/03/24/19/57/the-sheep-7089786_640.jpg",
+      "description": "咩咩咩，小羊跳进花园里啦！"
+    },
+    {
+      "tags": ["Lion", "Animal", "Mane"],
+      "img_src": "https://cdn.pixabay.com/photo/2018/03/25/20/17/lion-3260558_640.jpg",
+      "description": "狮子王来啦，走起路来好霸气！"
+    },
+    {
+      "tags": ["Lemur", "Jungle", "Primate"],
+      "img_src": "https://cdn.pixabay.com/photo/2016/11/23/01/20/lemur-1851671_640.jpg",
+      "description": "大尾巴狐猴，跳来跳去真灵活！"
+    },
+    {
+    "tags": ["Ape", "Nature", "Gorilla", "Zoo"],
+    "img_src": "https://cdn.pixabay.com/photo/2016/04/22/21/07/monkey-1346590_640.jpg",
+    "description": "大猩猩在树上笑嘻嘻，和小朋友打招呼啦！"
+  },
+  {
+    "tags": ["Tiger", "Animal", "Roar"],
+    "img_src": "https://cdn.pixabay.com/photo/2014/10/23/18/56/tiger-500118_640.jpg",
+    "description": "虎虎生威，小老虎发出响亮的吼声！"
+  },
+  {
+    "tags": ["Gorilla", "Nature", "Monkey"],
+    "img_src": "https://cdn.pixabay.com/photo/2017/05/16/21/24/gorilla-2318998_640.jpg",
+    "description": "大大猩猩抱着宝宝，温柔又有力气！"
+  },
+  {
+    "tags": ["Dog", "Cat", "Pet"],
+    "img_src": "https://cdn.pixabay.com/photo/2016/07/21/14/18/dog-1532627_640.png",
+    "description": "小狗和小猫咪在一起玩耍，好朋友哦！"
+  },
+  {
+    "tags": ["Iceland", "Arctic Fox", "Fox"],
+    "img_src": "https://cdn.pixabay.com/photo/2017/01/14/12/59/iceland-1979445_640.jpg",
+    "description": "白白的小狐狸，雪地里蹦蹦跳跳！"
+  },
+  {
+    "tags": ["Bird", "Great Cormorant"],
+    "img_src": "https://cdn.pixabay.com/photo/2022/03/30/17/52/bird-7101606_640.jpg",
+    "description": "黑色大鸟张开翅膀，准备飞向天空！"
+  },
+  {
+    "tags": ["Rottweiler", "Dog", "Sunset"],
+    "img_src": "https://cdn.pixabay.com/photo/2022/10/10/04/23/rottweiler-7510724_640.jpg",
+    "description": "大狗狗夕阳下守护家园，好勇敢！"
+  },
+  {
+    "tags": ["Bearded Dragon", "Reptile"],
+    "img_src": "https://cdn.pixabay.com/photo/2025/07/10/14/29/bearded-dragon-9706773_640.jpg",
+    "description": "小蜥蜴张张嘴，是在和你说你好呀！"
+  },
+  {
+    "tags": ["Animal", "Nature", "Mammal"],
+    "img_src": "https://cdn.pixabay.com/photo/2021/12/29/18/19/animal-6902437_640.jpg",
+    "description": "毛茸茸的朋友在森林里跳跳跳！"
+  },
+  {
+    "tags": ["Cat", "Animal", "Mammal"],
+    "img_src": "https://cdn.pixabay.com/photo/2024/01/29/20/40/cat-8540772_640.jpg",
+    "description": "喵喵猫咪躲猫猫，一眨眼就不见啦！"
+  }
+  ]
+  },
+  {
+  "keyword": "Vehicles",
+  "results": [
+    {
+      "tags": [
+        "Mini Cooper",
+        "Automobile"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2015/05/25/17/36/mini-cooper-783702_640.jpg",
+      "description": "一辆经典的迷你库珀汽车，颜色鲜艳。"
+    },
+    {
+      "tags": [
+        "Firetruck",
+        "Fire"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2021/11/24/03/19/firetruck-6820125_640.jpg",
+      "description": "一辆红色消防车，准备执行紧急任务。"
+    },
+    {
+      "tags": [
+        "Dogs",
+        "Pets",
+        "Animals"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2019/09/14/23/14/dogs-4477058_640.jpg",
+      "description": "几只可爱的狗狗，作为宠物动物出现。"
+    },
+    {
+      "tags": [
+        "Vintage 1950s"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2015/08/13/17/24/vintage-1950s-887272_640.jpg",
+      "description": "一辆50年代风格的复古汽车，充满怀旧气息。"
+    },
+    {
+      "tags": [
+        "Aviation",
+        "Helicopter"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2023/10/16/01/40/aviation-8318208_640.jpg",
+      "description": "一架停在草地上的直升机。"
+    },
+    {
+      "tags": [
+        "Wheel Rim",
+        "Car Wallpapers"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2014/01/30/01/55/wheel-rim-254714_640.jpg",
+      "description": "汽车轮毂特写，金属质感清晰。"
+    },
+    {
+      "tags": [
+        "Vintage Car",
+        "Classic Car"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2022/07/04/10/46/vintage-car-7300881_1280.jpg",
+      "description": "一辆经典的老式汽车，展现优雅设计。"
+    },
+    {
+      "tags": [
+        "Vehicle",
+        "Excavator"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2019/05/07/18/57/vehicle-4186687_640.png",
+      "description": "黄色的挖掘机，常见建筑施工设备。"
+    },
+    {
+      "tags": [
+        "Tank",
+        "Attack",
+        "Army"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2017/06/24/12/02/tank-2437589_640.jpg",
+      "description": "一辆军用坦克，装备重型火炮。"
+    },
+    {
+      "tags": [
+        "Antique Car",
+        "Dare"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2024/08/02/21/54/antique-car-8940770_640.jpg",
+      "description": "一辆古董车，展现怀旧和冒险精神。"
+    },
+    {
+      "tags": [
+        "Tunnel",
+        "Road",
+        "Speed"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2019/06/15/16/37/tunnel-4276025_640.jpg",
+      "description": "汽车穿越隧道，体现速度与现代交通。"
+    },
+    {
+      "tags": [
+        "Quad",
+        "Atv",
+        "Motocross"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2017/06/07/19/07/quad-2381212_640.jpg",
+      "description": "一辆越野四轮摩托车，适合崎岖地形。"
+    },
+    {
+      "tags": [
+        "Off-road Vehicle",
+        "Car"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2016/05/05/15/57/off-road-vehicle-1374195_640.jpg",
+      "description": "一辆越野车，设计用于复杂路况。"
+    },
+    {
+      "tags": [
+        "Bumper Cars",
+        "Dodgems"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2019/08/07/15/03/bumper-cars-4390958_640.jpg",
+      "description": "游乐场碰碰车，色彩丰富。"
+    },
+    {
+      "tags": [
+        "Speedometer",
+        "Dashboard"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2016/03/11/02/08/speedometer-1249610_640.jpg",
+      "description": "汽车仪表盘上的速度表特写。"
+    },
+    {
+      "tags": [
+        "Racing Bicycle",
+        "Racer"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2013/07/13/13/43/racing-bicycle-161449_640.png",
+      "description": "一辆轻便的竞赛车自行车。"
+    },
+    {
+      "tags": [
+        "Japancontest",
+        "Japan"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2024/11/05/05/38/japancontest-9175030_640.jpg",
+      "description": "日本街头的汽车展览现场。"
+    },
+    {
+      "tags": [
+        "Kerosene Delivery Vehicle"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2021/10/15/01/26/kerosene-delivery-vehicle-6710699_640.png",
+      "description": "一辆煤油配送车辆。"
+    },
+    {
+      "tags": [
+        "Hot Air Balloon",
+        "Balloon"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2023/10/15/02/20/hot-air-balloon-8316056_640.png",
+      "description": "一只热气球漂浮在天空中。"
+    },
+    {
+      "tags": [
+        "Umbrella",
+        "People",
+        "Vehicle"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2023/03/21/15/41/umbrella-7867543_640.jpg",
+      "description": "雨中有人撑伞，背景有车辆经过。"
+    },
+    {
+      "tags": [
+        "Auto",
+        "Old Car"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2020/08/30/18/06/auto-5530289_640.jpg",
+      "description": "一辆老式汽车，充满年代感。"
+    },
+    {
+      "tags": [
+        "Dashboard",
+        "Car",
+        "Vehicle"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2018/07/01/20/01/dashboard-3510327_640.jpg",
+      "description": "汽车仪表盘，显示各种行车信息。"
+    },
+    {
+      "tags": [
+        "Car",
+        "Vehicle",
+        "Drive"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2023/10/15/02/20/car-8316057_640.png",
+      "description": "一辆白色轿车正在公路上行驶。"
+    },
+    {
+      "tags": [
+        "Powerboat",
+        "Nature",
+        "Speed"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2017/09/25/07/49/powerboat-2784250_640.jpg",
+      "description": "一艘快艇在水面高速行驶。"
+    },
+    {
+      "tags": [
+        "Quad",
+        "Vehicle"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2014/12/03/12/05/quad-555377_640.jpg",
+      "description": "一辆红色四轮越野车，适合户外探险。"
+    },
+    {
+      "tags": [
+        "Automobile",
+        "Vehicle"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2018/04/23/21/26/auto-3345601_640.jpg",
+      "description": "一辆现代汽车，线条流畅。"
+    },
+    {
+      "tags": [
+        "Fiat",
+        "Fiat 500"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2019/07/30/08/11/fiat-4372246_640.jpg",
+      "description": "一辆经典菲亚特500汽车。"
+    },
+    {
+      "tags": [
+        "Vehicle",
+        "Utility Vehicle"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2022/08/08/07/52/vehicle-7372130_640.png",
+      "description": "一辆实用型多功能车辆。"
+    },
+    {
+      "tags": [
+        "Driver",
+        "Car Wallpapers"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2020/10/23/12/56/driver-5678711_640.jpg",
+      "description": "车内驾驶员，专注于驾驶。"
+    },
+    {
+      "tags": [
+        "Motorcycle"
+      ],
+      "img_src": "https://cdn.pixabay.com/photo/2017/02/18/18/43/motorcycle-2077914_640.jpg",
+      "description": "一辆黑色摩托车，造型酷炫。"
+    }
+  ]
+}
+]
+
+</script>
+
+<script>
+//如果需要从远程请求数据
+fetch('/craw_results_agent.json').then(response => {
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  return response.json();
+}).then(data => {
+  console.log(data);
+  let html = '';
+  for (let i = 0; i < data.length; i++) { 
+    const title = data[i].keyword;///title 作为书的封面
+    const results = data[i].results;
+    const image = data[i].image;
+    html += `<div class="swiper-slide">
+        <p class="cover">${title}</p></div>`;
+    for (let j = 0; j < results.length; j++) {
+        const result = results[j];
+      html += `<div class="swiper-slide">
+        <img src="${result.img_src}" alt="">
+        <p>${result.description}</p>
+    </div>`;
+    }
+  }
+  // 将生成的HTML插入到swiper-wrapper中
+  document.querySelector('.swiper-wrapper').innerHTML = html;
+  intiSwiper();
+}).catch(error => {
+  console.error('There has been a problem with your fetch operation:', error);
+});
+
+const loadDataAndDisplay = ()=>{
+    const jsonData = JSON.parse(document.getElementById('myData').textContent);
+    let html = '';
+    for (let i = 0; i < jsonData.length; i++) {
+        const title = jsonData[i].keyword;///title 作为书的封面
+        const results = jsonData[i].results;
+        const image = jsonData[i].image;
+        html += `<div class="swiper-slide">
+            <p class="cover">${title}</p></div>`;
+        for (let j = 0; j < results.length; j++) {
+            const result = results[j];
+        html += `<div class="swiper-slide">
+            <img src="${result.img_src}" alt="">
+            <p>${result.description}</p>
+        </div>`;
+        }
+    }
+    // 将生成的HTML插入到swiper-wrapper中
+    document.querySelector('.swiper-wrapper').innerHTML = html;
+    intiSwiper();
+}
+const intiSwiper = () => {
+  // 初始化Swiper
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+};
+loadDataAndDisplay();
+// const swiper = new Swiper('.swiper', {
+//   // Optional parameters
+//   direction: 'vertical',
+//   loop: true,
+//   // If we need pagination
+//   pagination: {
+//     el: '.swiper-pagination',
+//   },
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+//   // And if we need scrollbar
+//   scrollbar: {
+//     el: '.swiper-scrollbar',
+//   },
+// });
+</script>
+</body>
+</html>
